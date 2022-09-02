@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- SVG stands for Scalable Vector Graphics, and is used to draw shapes with HTML-style markup.
+It offers several methods for drawing paths, boxes, circles, text, and graphic images.
+SVG is not pixel-based, so it can be magnified infinitely with no loss of quality. -->
+
+<!-- Drawing a Circle
+
+
+To draw shapes with SVG, you first need to create an SVG element tag with two attributes: width and height.
+svg width="1000" height="1000"></svg>
+HTML
+To create a circle, add a <circle> tag: -->
+    <svg width="2000" height="2000">
+        <circle cx="80" cy="80" r="50" fill="green" />
+     </svg>
+<!-- - cx pushes the center of the circle further to the right of the screen
+- cy pushes the center of the circle further down from the top of the screen
+- r defines the radius
+- fill determines the color of our circle
+- stroke adds an outline to the circle -->
+<svg width="2000" height="2000">
+    <rect width="300" height="100" 
+      x="20" y="20" fill="green" />
+ </svg>
+
+ <svg width="400" height="410">
+    <line x1="10" y1="10" x2="200" y2="100" 
+        style="stroke:#000000; stroke-linecap:round; 
+        stroke-width:20"  />
+</svg>
+<!-- (x1, y1) define the start coordinates(x2, y2) define the end coordinates. -->
+
+<svg width="2000" height="500">
+    <polyline style="stroke-linejoin:miter; stroke:black; 
+        stroke-width:12; fill: none;"
+        points="100 100, 150 150, 200 100" />
+</svg>
+
+<!-- Ellipse
+The <ellipse> is similar to the <circle>, with one exception:
+You can independently change the horizontal and vertical axes of its radius, using the rx and ry attributes. -->
+<svg height="500" width="1000">
+    <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+ </svg>
+
+ <!-- Polygon
+The <polygon> element is used to create a graphic with at least three sides. The polygon element is unique because it automatically
+     closes off the shape for you. -->
+     <svg width="2000" height="2000">
+        <polygon points="100 100, 200 200, 300 0" 
+              style="fill: green; stroke:black;" />
+        </svg>
+ <!-- Polygon comes from Greek. "Poly" means "many" and "gon" means "angle." -->
+</body>
+</html>

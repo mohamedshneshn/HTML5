@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <meta charset="UIF-8"/>
+        <title>FORMS</title>
+        <meta name="description" content="this is Forms of HTML"/>
+    </head>
+
+    <body>
+
+<!-- <form>     :is used to collect information from the user.
+                :each form should have a submit button.
+      action: attribute contains the URL address of the webpage that is loaded after a form submission.
+      method: attribute specifies the HTTP method to be used when submitting the form.
+             GET method used to get data from serve
+             POST method used to send data to server
+             
+    enctype: attribute specifies the type of data that can be submitted in the form.
+             plain text, encoded text, and multipart form data.
+ 
+
+     label            : is used to define a label for many form elements.
+     <input>          : tag is used to create an input field.inline& self closing-
+        type= "" :    :attribute specifies the type of input field.
+             text     : allow user to enter text
+             password : allow user to enter password
+             email    : allow user to enter email
+             submit   : allow user to submit the form
+             radio    : allows the user select only one of a number of choices
+             checkbox : allows the user select one or more of a number of choices
+             select   : allows the user select one or more of a number of choices
+             date     : allow user to enter date
+             time     : allow user to enter time
+             number   : allow user to enter number
+             range    : allow user to enter number
+             color    : allow user to enter color
+             file     : allow user to enter file
+        
+               
+
+
+
+        name= ""    : specifies the name of the input field to be sent to the server.
+        value= ""   : specifies the value of the input field.
+        placeholder : specifies a hint to the user of what can be entered in the input field.
+        required    : specifies that the input field must be filled out before submitting the form.
+        checked     :specifies that the input field should be checked when the form is submitted.
+        disabled    : specifies that the input field should be disabled when the form is submitted.
+
+       <textarea> tag To support multiple lines of input
+    -->
+
+
+        <form novalidate target="_blank">         <!--novalidate=no consider required input use in test case-->
+            <label>USER NAME:</label>                   
+            <input type="text">                        
+            <label>PASSWORD:</label>
+            <input type="password">                    
+            <input type="submit">
+        </form>
+        <br>
+        <!-- ----------------  -->
+                                           
+        <form action="" method="POST" novalidate target="_blank">         
+            <div>                              
+                <label>USER NAME</label>
+                <input type="text"             
+                       required 
+                       placeholder="USER NAME" 
+                       name="user name" 
+                       value="mohamed"         
+                       readonly>               
+            </div>                             <!--readonly =cant change data and send-->
+            <br>                               <!--name=server or backend can know data-->
+           <div>
+            <label>PASSWORD</label>
+            <input type="password"
+                   required 
+                   placeholder="Write A Complex Password"
+                   name=password
+                   minlength="10"
+                   maxlength="20">             
+           </div>
+           <br>
+           <div>
+            <!-- --------------------- -->
+            <label>SUBJECT</label>
+            <input type="text" name="sunject" autofocus>                    
+           </div>
+           <br>
+           <!-- ------------------------------------ -->
+           <br>
+           <div>
+            <label>EMAIL</label>
+            <input type="email"
+                   required 
+                   placeholder="Write valid email"
+                   value="eng.mohamed.shneshn@gmail.com"
+                   name=mail 
+                   disabled>                    
+           </div>                                 <!--disable=cant change and no send-->
+           <br>
+           <div>
+            <!-- ------------------------------------------ -->
+           <label>RANGE</label>
+           <input type="range"
+                  name=range 
+                  min="0"
+                  max="100"
+                  step="10"
+                  value="0">                    
+          </div>
+          <br>
+          <!-- ----------------------------------------------- -->
+          <br>
+           <div>
+           <label>NUMBER</label>
+           <input type="number" name="number" min="0" max="100" value="0" >                    
+          </div>
+          <br>
+          <!-- --------------------------------------------------- -->
+          <hr>
+           <div>                                                        <!--radio=only one choose-->
+           <input id="win" type="radio" name="OS" value="windows" checked> <!--id & for to connect input with label-->
+           <label for="win">WINDOWS</label>
+        </div>
+        <div>
+            <input id="li" type="radio" name="OS" value="LINUX">
+            <label for="li">LINUX</label>
+         </div>
+         <div>
+            <input id="MC" type="radio" name="OS" value="MAC">
+            <label for="MC">MAC</label>
+         </div>
+         <hr>
+         <!-- --------------------------------------------  -->
+         <div>                                               <!--checkbox=many chooies choose-->
+         <input id="win2" type="checkbox" name="OS" value="windows" checked> <!--id & for to connect input with label-->
+         <label for="win2">WINDOWS</label>
+      </div>
+      <div>
+          <input id="li2" type="checkbox" name="OS" value="LINUX">
+          <label for="li2">LINUX</label>
+       </div>
+       <div>
+          <input id="MC2" type="checkbox" name="OS" value="MAC">
+          <label for="MC2">MAC</label>
+       </div>
+           <br>
+    <!-- ---------------------------------------------------- -->
+           <div>
+               <label for="book">choose book :</label>
+               <select name="book" id="book" multiple>   <!--select=if i have many chooices-->
+                   <optgroup label="romantic">           <!--multiple=to choose many choose-->
+                    <option value="1"> Book1 </option>   <!--value=this is the value send to server-->
+                    <option value="2" selected> Book2 </option>
+                    <option value="3"> Book3 </option>
+                   </optgroup>
+                  <optgroup label="comedy">
+                    <option value="4"> Book4 </option>
+                    <option value="5"> Book5 </option>
+                  </optgroup>
+                
+               </select>
+           </div>
+    <!-- ------------------------------------------------------  -->
+           <hr>
+           <div>
+               <label>Select</label>                 <!--data list=we can search inside-->
+               <input list="programming" name="PRO"> 
+               <datalist id="programming">
+                   <option value="C">
+                   <option value="C++">
+                   <option value="JAVA">
+                   <option value="HTML">
+                            
+               </datalist>
+           </div>
+           <!-- -------------------------------------------------  -->
+           <hr>
+           <textarea placeholder="test text" name="subject" rows="10" cols="10"></textarea>
+           <hr>
+           <div>
+            <!-- --------------------------------------------------------  -->
+           <label>Upload</label>
+           <input type="file">
+           </div>
+           <hr>
+           <div>
+           <label>Search</label>
+           <input type="search">
+           </div>
+           <hr>
+           <div>
+            <label>URL</label>
+            <input type="url">
+            </div>
+            <hr>
+            <div>
+                <label>DATE</label>
+                <input type="date">
+            </div>
+                <hr>
+            <div>
+                <label>Time</label>
+                <input type="time">
+            </div>
+                <hr>    
+           
+<!-- ------------------------------------------------------------------ -->
+           <input type="hidden" value="SAVE">   <!--hidden=if i need to send data not important to show for user-->
+           <input type="submit" value="SAVE">   <!--value=which need to show in the field-->
+           <input type="reset" value="RESET">   <!--value=which need to show in the field-->
+        </form>
+   
+
+   
+    </body>
+</html>

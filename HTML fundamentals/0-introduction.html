@@ -1,0 +1,179 @@
+<!-- 
+    how does the internet work?
+
+                                                   Google server
+                                                         |
+(internet backbone)                                      |
+cable --------------------------------------------------------------------
+                                     |
+                                     |
+                        client -----ISP----DNS server
+                        
+internet: a global network of computers that communicate with each other to share data.
+
+server: a device that used to store data and provide data to other devices.
+
+client: a device that uses data from a server.
+
+ISP: internet service provider , a company that provides internet access to its customers.
+
+DNS: domain name system,translates human-readable website names into computer-readable IP addresses..
+     is a phonebook for the internet that has a list of domain names and their IP addresses.
+
+IP address: a unique number assigned to each device connected to a network to identify it.
+browser:  is a web application that allows users to access and view web pages.
+ -->
+
+<!-- 
+What happens when you type a URL in the browser?
+
+1-the browser sends a request to DNS server to get the IP address of the domain name.
+2-DNS server sends the IP address to the browser.
+3-the browser sends a request to the server.
+4-the server sends a response to the browser(will be html code,css code,js code).
+5-the browser displays the response.
+
+HTML? represents the structure of the page.
+CSS? represents the style of the page.
+JS? represents the behaviour of the page. -->
+
+                  <!-- --------------------------  -->
+
+<!-- HTML: is hypertext markup language,not a programming language,
+          used to create the structure or content of websites by using tags.
+
+     markup language: is a computer language that uses tags to define elements within a document
+     hypertext: is text displayed on a computer  with references to other text that the reader can immediately access.
+ 
+     HTML document: include different elements such as headings,paragraphs,images,tables.
+                    These elements are defined using different tags.
+     
+                    
+     container tag: opening tag + content + closing tag  <p>content</p>
+     self-closing tag: opening tag <br> don't have content and closing tag (empty tag)
+                       ex: <br> <hr> <img> <input> <link> <meta>
+                       ex: <br /> <hr /> <img /> <input /> <link /> <meta />
+                       should be space between tag and /
+
+    HTML Doc: to get more info about html tags:
+             1- https://www.w3schools.com/tags/default.asp (w3schools)
+             2- https://developer.mozilla.org/en-US/docs/Web/HTML/Element (MDN)=> Mozilla Developer Network
+             3-https://www.devdocs.io/html/ (devdocs)
+    
+    HTML alias :https://docs.emmet.io/cheat-sheet/ to write html faster
+  
+    HTML attributes: provide additional information about element like behaviour or apperance, while also modifying them.
+                     ex: <p lang="en-us">Hello</p>
+                     lang: attribute
+                     en-us: attribute value
+    Global attributes: can be used on any element like:id,class
+    Local attributes: can be used on specific elements like:href,src
+    
+    HTML5: is the latest version of HTML.
+                    
+ -->
+
+
+
+
+<!DOCTYPE html> 
+<!--document type declaration tells the browser the html version (html5) -->
+
+<html lang="en">   
+  <!-- html tag: is the root element of an HTML page, everything inside this element is HTML code.
+       lang="en": is an attribute that specifies the language of the document. -->
+  
+
+
+  <head>
+    <!-- head tag: contains all of the non-visual elements ex:title, meta tags, scripts, styles, 
+                   and other things that we don't want to show on the page. -->
+    
+    <title>♥ BOOKSTORE  ♥</title> 
+    <!-- title tag: specifies a title for the document. 
+                   The title is shown in the browser's title bar or in the page's tab. -->
+
+    <meta name="description" content="this is our book store" charset="UTF-8" />
+    <!-- meta tag:tell the browser how render the page(character set),
+                  and give info to search engines about the page(description,keywords,author,copyright)
+                 
+         
+         name="description":specifies the name of the metadata.
+         content="this is our book store":specifies the value of the metadata.
+         charset="UTF-8":"unicode transformation format 8-bit."
+                          specifies the character encoding for the HTML document.
+                          default in html5 as it supports all languages and also supports emojis.
+               -->
+
+    <style>
+      body {
+        background-color: white;
+      }
+    </style>
+    <!--write css code-->
+   
+    <link rel="stylesheet" href="">
+    <!--link to external file like reset file or css file
+        rel attribute: specifies the relationship between the current document and the linked document.
+        href attribute: specifies the location (URL) of the linked document.-->
+    
+    <script></script>
+        <!--write JAVA SCRIPT-->
+        
+  </head>
+
+  <body>
+    <!-- body tag: contains all of the visual elements of the page.
+        body elements: headings <h1> to <h6>, paragraphs <p>, images <img>,
+                       links <a>, lists <ul>, tables <table>, etc. -->
+     
+    
+
+ 
+   
+ 
+
+   
+   
+   
+  
+    <div style="background-color: darkgray">
+      <!--div=container element to controll in many pragraph-->
+
+      <h1>MY FAMILY</h1>
+      <p>BABA AND MAMA</p>
+      <p>AMMAR AND YOUMNA</p>
+    </div>
+
+    <p>I LOVE YOU AMMAR</p>
+    <p>YOUMNA</p>
+    <p>I LOVE YOU AMMAR &lt;p&gt; YOUMNA</p>
+    <!--Entities=symbol of shapes-->
+
+    <hr />
+    <p>"I LOVE YOU AMMAR"</p>
+    <q> I LOVE YOU AMMAR</q>
+    <!--quot to pur"""-->
+    <blockquote>I Love you AMMAR</blockquote>
+    <button>click</button>
+    <div>
+      https://www.youtube.com<wbr />/watch?v=AzjtVtxoBLc&list=PLDoPjvoNmBAw_t_XWUFbBX-<wbr />&index=33
+    </div>
+    <!--wbr=link break-->
+
+    <p>السلام 4 ammar</p>
+    <!--alsalam 4 ammart-->
+    <p><bdi>السلام</bdi>4 ammar</p>
+    <!--bdi=for isolate if u have arabic and english -->
+    <code> int x=10; int y=11; int z=x+y; </code>
+    <p>I Love YOU AMMAR</p>
+    <pre>                                          <!--pre=preformatted=to save format-->
+           I
+           Love
+           YOU
+           AMMAR
+        </pre>
+    <hr />
+    <iframe src="http://elzero.org/" frameborder="0"></iframe>
+  </body>
+</html>

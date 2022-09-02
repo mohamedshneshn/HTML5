@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UIF-8"/>
+        <title>LAYOUT</title>
+        <meta name="description" content="this is layout of web page"/>
+    </head>
+
+    <body>
+        
+        <!-- Before HTML5, there was no standard for playing audio files on a web page. -->
+        <!-- The <audio> element creates an audio player inside the browser.. -->
+        <!-- source tag is used to specify the source of the audio file. -->
+        <!-- src attribute is used to specify the source of the audio file. -->
+        <!-- The text between the <audio> and </audio> tags 
+            will display in browsers that do not support the <audio> element. -->
+        
+       
+         <!-- controls attribute Specifies that audio controls should be displayed (such as a play/pause button, etc.)
+         autoplay attribute ,audio starts playing as soon as it is ready, without asking for the visitor's permission
+         loop attribute =the audio replay every time it is finished. --> 
+        
+         <!-- Currently, there are three supported file formats for the <audio> element: MP3, WAV, and OGG. -->
+ 
+        <audio controls autoplay loop>
+            <source src="media/ya_rasool_salmalika.mp3" type="audio/mpeg"> <!--MME type-->
+            <source src="media/ya_rasool_salmalika.ogg" type=audio/ogg>
+            Audio element not supported by your browser. 
+        </audio>
+
+
+        <!-- Currently, there are three supported video formats for the <video> element: MP4, WebM, and OGG. -->
+        <video controls width="300" height="300"loop autoplay muted poster="imgs/3.jpg">
+            <source src="media/VID_20210710_181755.mp4"type="video/mp4"> <!--MME type-->
+            <track src="mrrwser.vtt" kind="subtitles"srcland=en label="english">  <!--for translation-->
+           your browser doesnt work
+        </video>
+
+   
+    </body>
+</html>
